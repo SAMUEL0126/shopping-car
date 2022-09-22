@@ -1,0 +1,492 @@
+@import url('https://fonts.googleapis.com/css2?family=Macondo&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url('/Images/fondopag.jpeg');
+  background-size: cover;
+}
+
+header {
+  width: 100%;
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 2rem;
+  color: white;
+  padding: 0;
+  background-color: #0000008f;
+}
+header img{
+  height: 10%;
+  width: 5.2%;
+  border-radius: 100%;
+  position: absolute;
+  transform: translate(-64vh, -5px);
+  cursor: pointer;
+}
+.notification{
+  visibility: hidden;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 13px;
+  background-color: red;
+  height: 20px;
+  width: 20px;
+  color: white;
+  position: absolute;
+  transform: translate(-60vh, -5vh);
+}
+select {
+  width: 12rem;
+  height: 30px;
+  margin-top: 2rem;
+  box-shadow: 0 0 15px white;
+  border-radius: 0px;
+  background-color: #221007;
+  color: #ffff;
+  cursor: pointer;
+  transition: 1s;
+}
+select:hover{
+  background-color: #000;
+  transition: 1s;
+}
+.crear{
+  display: none;
+  justify-content: center;
+  flex-direction: column;
+  color: #000;
+  height: 50vh;
+  width: 43vh;
+  background-color: white;
+  margin-top: 4%;
+}
+.crear .close_createP{
+  width: 25px;
+  height: 23px;
+  position: absolute;
+  transform: translate(246px, -143px);
+}
+.inpimg{
+  position: absolute;
+  transform: translate(100px, 30px);
+  background-color: transparent;
+  border: none;
+  border-bottom: 15px white solid;
+  width: 10.5%;
+}
+.inpname{
+  position: absolute;
+  transform: translate(104px, -112px);
+  height: 25px;
+  width: 190px;
+}
+.inpprecio{
+  position: absolute;
+  transform: translate(104px, -50px);
+  height: 25px;
+  width: 190px;
+}
+.crear button{
+  background-color: #000;
+  color: white;
+  position: absolute;
+  width: 10%;
+  transform: translate(104px, 117px);
+  height: 30px;
+}
+
+.crear input{
+  border: none;
+  border-bottom: 2px solid black;
+  background: transparent;
+  color: black;
+}
+
+.crear .title{
+  text-align: center;
+  position: absolute;
+  transform: translate(85px, -179px);
+}
+
+#create-producto{
+  width: 170px;
+  height: 30px;
+  border-radius:0px;
+  box-shadow: 0 0 15px white;
+  background-color: #505050;
+  color: white;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  transition: 1s;
+  cursor: pointer;
+}
+#create-producto:hover{
+  background-color: white;
+  color: #000;
+  transition: 1s;
+}
+.crear .close_createP {
+  width: 25px;
+  height: 23px;
+  position: absolute;
+  transform: translate(371px, -212px);
+  cursor: pointer;
+  transition: 1s;
+}
+.crear .close_createP:hover{
+  background-color: rgb(123, 123, 123);
+  transition: 1s;
+}
+
+main {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card-product {
+  margin: 1rem;
+  width: 10rem;
+  height: 13rem;
+  border-radius: 15px;
+  border: groove white 2px;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: none;
+}
+
+.img-product {
+  width: 100%;
+  border-radius: 15px 15px 0 0;
+  height: 50%;
+}
+
+.name-product {
+  margin-top: 0.8rem;
+  color: #ffffff;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.price-product {
+  font-family: 'Macondo', cursive;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #00ff08;
+}
+
+.btn-add {
+  width: 8rem;
+  height: 1.5rem;
+  border-radius: 5px;
+  background-color: green;
+  color: white;
+  font-size: 1rem;
+  transition: 1s;
+}
+
+
+.btn-add:hover {
+  cursor: pointer;
+  background-color: #3cc716;
+  font-size: 17.4px;
+  color: #ffffff;
+  transition: 1s;
+}
+#carrito_container {
+  width: 239px;
+  height: 261px;
+  background-color: rgb(116, 116, 116);
+  margin-top: 20px;
+  border-radius: 10px;
+}
+.divx{
+  position: absolute;
+  transform: translate(66px, 25px);
+  color: red;
+}
+.btn-remove{
+  width: 22px;
+  height: 21px;
+  background-color: red;
+  color: black;
+  position: absolute;
+  transform: translate(59px, 5px);
+  cursor: pointer;
+  transition: 1s;
+  border: none;
+  border-radius: 100%;
+}
+.btn-remove:hover{
+  background-color: black;
+  color: red;
+  width: 24px;
+  height: 23px;
+  transition: 1s;
+}
+/*                       M O D A L   D E   C O M P R A S                    */
+.compras{
+  background-color: white;
+  color: #000;
+  position: absolute;
+  transform: translate(0px, 40vh);
+  width: 50%;
+  padding: 17px;
+  display: none;height: auto;
+  flex-direction: column;
+}
+.compras .close{
+  height: 22px;
+  width: 23px;
+  background-color: rgb(179 176 176);
+  color: #000;
+  cursor: pointer;
+  transition: 1s;
+}
+.compras h2{
+  text-align: center;
+}
+.compras .close:hover{
+  background-color: #000;
+  color: white;
+  transition: 1s;
+}
+.compras hr{
+  background-color: #000;
+  height: 2px;
+}
+.compras .Venta .elprecio{
+  font-size: 22px;
+}
+.Venta{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.labelPiezas{
+  color: rgb(255, 0, 0);
+}
+
+.itemt{
+  position: absolute;
+  transform: translate(10px, -4vh)
+}
+.imagendelacompra{
+  width: 100px;
+  border-radius: 5%;
+}
+.aument{
+  position: absolute;
+  transform: translate(50vh, 10px);
+}
+.cantidad p{
+  font-size: 21px;
+  position: absolute;
+  transform: translate(-10px, -24px);
+}
+
+.menos{
+  width: 220%;
+  height: 18px;
+  background-color:red;
+  color: white;
+  cursor: pointer;
+  border: none;
+  transition: 0.1s;
+}
+.menos:hover{
+  width :25px;
+  height: 20px;
+  transition: 0.1s;
+}
+.mas{
+  width: 190%;
+  height: 18px;
+  background-color: rgb(0, 143, 187);
+  color: white;
+  cursor: pointer;
+  border: none;
+  transition: 0.1s;
+}
+.mas:hover{
+  width : 25px;
+  height: 20px;
+  transition: 0.1s;
+}
+.elprecio{
+  height: 45px;
+  width: 20%;
+}
+.cerrarC{
+  width: 10px;
+}
+.closeBuy{
+  position: absolute;
+  transform: translate(-5vh, -25px);
+  height: 22px;
+  width: 23px;
+  background-color: rgb(255, 0, 0);
+  color: #000;
+  cursor: pointer;
+  transition: 1s;
+}
+.closeBuy:hover{
+  background-color: black;
+  color :red;
+  transition: 1s;
+}
+.ContConfirmBuy{
+  width: auto;
+  height: auto;
+  position: absolute;
+  transform: translate(92vh, 18px);
+}
+.confirmBuy{
+  background-color: green;
+  border: none;
+  height: 25px;
+  width: 57px;
+  border-radius: 4px;
+  transition: 1s;
+}
+.confirmBuy:hover{
+  background-color: #00ff08;
+  color: white;
+  
+  transition: 1s;
+}
+/*============= R E S P O N S I V E =============*/
+@media screen and (max-width: 1500px) {
+  .compras
+  header img{
+    height: 10%;
+    width: 6.2%;
+    border-radius: 100%;
+    position: absolute;
+    transform: translate(-64vh, -5px);
+  }
+  .crear .title{
+    text-align: center;
+    position: absolute;
+    transform: translate(30px, -120px);
+  }
+  .inpname{
+    position: absolute;
+    transform: translate(40px, -74px);
+    height: 25px;
+    width: 190px;
+  }
+  .inpprecio{
+    position: absolute;
+    transform: translate(40px, -20px);
+    height: 25px;
+    width: 190px;
+  } 
+  .inpimg{
+    position: absolute;
+    transform: translate(43px, 45px);
+    width: 189px;
+  }
+  .crear .close_createP{
+    width: 25px;
+    height: 23px;
+    position: absolute;
+    transform: translate(246px, -143px);
+    cursor: pointer;
+    transition: 1s;
+  }
+  .crear .close_createP:hover{
+    width: 25px;
+    height: 23px;
+    position: absolute;
+    transform: translate(246px, -143px);
+    background-color: rgb(123, 123, 123);
+    transition: 1s;
+  }
+  .crear button{
+    position: absolute;
+    transform: translate(75px, 117px);
+  }
+  .compras{
+    background-color: white;
+    color: #000;
+    position: absolute;
+    transform: translate(0px, 40vh);
+    width: 50%;
+    padding: 17px;
+    display: none;
+    height: auto;
+    flex-direction: column;
+  }
+}
+
+
+
+/*======================== R E S P O S I V E  630PX ===============================*/
+
+@media screen and (max-width: 630px) {
+  header img{
+    height: 8%;
+    width: 17.2%;
+    border-radius: 100%;
+    position: absolute;
+    transform: translate(12vh, -33px);
+  }
+  .notification{
+    visibility: hidden;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 13px;
+    background-color: red;
+    height: 20px;
+    width: 20px;
+    color: white;
+    position: absolute;
+    transform: translate(16vh, -7vh);
+  }
+  .ContConfirmBuy{
+    width: auto;
+    height: auto;
+    position: absolute;
+    transform: translate(35.4vh, 26px);
+  }
+  
+  .compras {
+    background-color: white;
+    color: #000;
+    position: absolute;
+    transform: translate(0px, 40vh);
+    width: 89%;
+    padding: 17px;
+    display: none;
+    height: auto;
+    flex-direction: column;
+  }
+  .closeBuy{
+    position: absolute;
+    transform: translate(-1vh, -25px);
+    height: 22px;
+    width: 23px;
+    background-color: rgb(255, 0, 0);
+    color: #000;
+    cursor: pointer;
+    transition: 1s;
+  }
+}
